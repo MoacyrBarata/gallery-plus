@@ -1,12 +1,12 @@
 import Container from "../components/container";
-import { PhotoWidget } from "../contexts/photos/components/photo-widget";
+import { PhotoList } from "../contexts/photos/components/photo-list";
 
 export function PageHome() {
   return (
     <Container>
-      <div className="grid grid-cols-4 gap-9">
-        <PhotoWidget
-          photo={{
+      <PhotoList
+        photos={[
+          {
             id: "123",
             title: "Olá",
             imageId: "portrait-tower.png",
@@ -15,9 +15,9 @@ export function PageHome() {
               { id: "3422", title: "Album 2" },
               { id: "3423", title: "Album 3" },
             ],
-          }}
-        />
-      </div>
+          },
+        ]}
+      />
     </Container>
   );
 }
